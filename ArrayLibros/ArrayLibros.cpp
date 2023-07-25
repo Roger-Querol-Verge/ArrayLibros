@@ -25,10 +25,12 @@ int main()
         libros[i][1] = autor;
     }
 
+    int filas = (sizeof(libros) / sizeof(libros[0]));
+    int columnas = (sizeof(libros[0]) / sizeof(libros[0][0]));
 
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < filas; i++)
     {
-        for (int j = 0; j < 2; j++)
+        for (int j = 0; j < columnas; j++)
         {
             cout << libros[i][j] << "\n";
         }
